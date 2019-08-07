@@ -84,8 +84,8 @@
    (hidden     `(,(car bg) "black" "black"))
    (modeline-fg     fg)
    (modeline-fg-alt base5)
-   (modeline-bg   (doom-darken dark-blue 0.475))
-   (modeline-bg-l (doom-darken dark-blue 0.45))
+   (modeline-bg   blackblue)
+   (modeline-bg-l blackblue)
    (modeline-bg-inactive   `(,(doom-darken (car bg-alt) 0.1) ,@(cdr bg-alt)))
    (modeline-bg-inactive-l `(,(car bg-alt) ,@(cdr base1))))
 
