@@ -81,7 +81,7 @@
    (vc-deleted     hi-red)
 
    ;; custom categories
-   (hidden     `(,(car bg) "black" "black"))
+   (hidden     `(,(car bg) "base0" "base0"))
    (modeline-fg     fg)
    (modeline-fg-alt base5)
    (modeline-bg   blackblue)
@@ -221,7 +221,7 @@
    ;; (org-footnote                    :foreground orange)
    ;; (org-formula                     :foreground cyan)
    ;; (org-headline-done               :foreground base5)
-   ;; (org-hide                        :foreground bg)
+   (org-hide                        :foreground base2)
 
 
    ;; (org-list-dt         :foreground highlight)
@@ -234,25 +234,26 @@
    ;; (org-tag             :foreground doc-comments :weight 'normal)
    ;; (org-ref-cite-face   :foreground yellow :weight 'light :underline t)
    ;; (org-latex-and-related :foreground magenta)
-   ;; (org-todo            :foreground green :bold 'inherit)
-   ;; (org-verbatim        :foreground green)
-   ;; (org-warning         :foreground warning)
+   (org-todo            :foreground magenta :bold t)
+   (org-verbatim        :foreground dark-blue)
+   (org-warning         :foreground warning)
 
    ;; ;; org-agenda
    ;; (org-agenda-done :inherit 'org-done)
    ;; (org-agenda-dimmed-todo-face :foreground comments)
-   ;; (org-agenda-date          :inherit 'default)
-   ;; (org-agenda-date-today    :underline t)
-   ;; (org-agenda-date-weekend  :foreground red :bold t)
-   ;; (org-agenda-structure     :foreground fg :weight 'ultra-bold)
-   ;; (org-agenda-clocking      :background (doom-blend blue bg 0.2))
-   ;; (org-upcoming-deadline         :foreground (doom-blend fg bg 0.8))
-   ;; (org-upcoming-distant-deadline :foreground (doom-blend fg bg 0.5))
-   ;; (org-scheduled            :foreground fg)
-   ;; (org-scheduled-today      :foreground base7)
-   ;; (org-scheduled-previously :foreground base8)
-   ;; (org-time-grid            :foreground comments)
-   ;; (org-sexp-date            :foreground fg)
+   (org-agenda-calendar-event :inherit 'default)
+   (org-agenda-date          :inherit 'default :bold t)
+   (org-agenda-date-today    :underline t :bold t)
+   (org-agenda-date-weekend  :foreground hi-red :bold t)
+   (org-agenda-structure     :foreground fg :weight 'bold)
+   (org-agenda-clocking      :background (doom-blend blue bg 0.2))
+   (org-upcoming-deadline         :foreground (doom-blend fg bg 0.8))
+   (org-upcoming-distant-deadline :foreground (doom-blend fg bg 0.5))
+   (org-scheduled            :foreground fg)
+   (org-scheduled-today      :foreground base7)
+   (org-scheduled-previously :foreground base8)
+   (org-time-grid            :foreground comments)
+   (org-sexp-date            :foreground fg)
 
    ;; ;; org-habit
    ;; (org-habit-clear-face          :weight 'bold :background base4)
@@ -264,20 +265,14 @@
    ;; (org-habit-overdue-face        :weight 'bold :background (doom-blend red bg-alt 0.5))
    ;; (org-habit-overdue-future-face :weight 'bold :background (doom-blend red bg-alt 0.3))
 
-   ;; (org-agenda-date-today               :underline t :weight 'bold )
-   ;; (org-agenda-date                     ((t (:foreground "#FFFFFF"))))
-   ;; (org-agenda-date-weekend             ((t (:foreground "#FF7F7F" :weight 'bold )
-   ;; (org-agenda-calendar-event           ((t (:foreground "#F6F3E8"))))
-   ;; (org-hide                            ((t (:foreground "#4C4C4C"))))
-   ;; (org-block                           ((t (:inherit font-lock-comment-face))))
-   ;; ;; css-mode / scss-mode
-   ;; (css-proprietary-property :foreground orange)
-   ;; (css-property             :foreground green)
-   ;; (css-selector             :foreground blue)
-   ;; ;; markdown-mode
-   ;; (markdown-markup-face :foreground base5)
-   ;; (markdown-header-face :inherit 'bold :foreground red)
-   ;; (markdown-code-face :background (doom-lighten base3 0.05))
+   ;; css-mode / scss-mode
+   (css-proprietary-property :foreground orange)
+   (css-property             :foreground teal)
+   (css-selector             :foreground blue)
+   ;; markdown-mode
+   (markdown-markup-face :foreground base5)
+   (markdown-header-face :inherit 'bold :foreground hi-red)
+   (markdown-code-face :background (doom-lighten base3 0.05))
    ;; ;; org-mode
    ;; (org-hide :foreground hidden)
    ;; (solaire-org-hide-face :foreground hidden)
