@@ -91,15 +91,16 @@
   ;; --- extra faces ------------------------
   (
    ;; override default settings
-   ((default &override) :background 'unspecified)
+   ;; ((default &override) :background 'unspecified)
    ;; (font-lock-comment-face :foreground comments :background 'unspecified)
    ;; (font-lock-doc-face     :foreground comments :background 'unspecified)
 
-   ;;  '(highlight                           ((t (:background "#556b2f"))))
    (highlight
     :background base3
     :foreground fg
     :distant-foreground base8)
+   ((hl-line &override)
+    :background "#556b2f")
    ;;
    (font-lock-negation-char-face        :foreground cyan :bold t)
    (font-lock-preprocessor-face         :foreground red :bold t)
