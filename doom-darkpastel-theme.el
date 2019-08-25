@@ -15,7 +15,6 @@
 ;;
 (require 'doom-themes)
 (setq frame-background-mode (frame-parameter nil 'background-mode))
-
 (def-doom-theme doom-darkpastel
   "Doom darkpastel theme"
   ;; name        default   256       16
@@ -91,7 +90,7 @@
   ;; --- extra faces ------------------------
   (
    ;; override default settings
-   ;; ((default &override) :background 'unspecified)
+   ((default &override) :background "#000000")
    ;; (font-lock-comment-face :foreground comments :background 'unspecified)
    ;; (font-lock-doc-face     :foreground comments :background 'unspecified)
 
