@@ -90,7 +90,7 @@
   ;; --- extra faces ------------------------
   (
    ;; override default settings
-   ((default &override) :background "#000000")
+   ((default &override) :background 'unspecified)
    ;; (font-lock-comment-face :foreground comments :background 'unspecified)
    ;; (font-lock-doc-face     :foreground comments :background 'unspecified)
 
@@ -194,14 +194,14 @@
    (outline-8 :inherit 'font-lock-comment-face :bold t )
 
    ;; org-mode
-   (org-level-1	:inherit 'outline-1)
-   (org-level-2	:inherit 'outline-2)
-   (org-level-3	:inherit 'outline-3)
-   (org-level-4	:inherit 'outline-4)
-   (org-level-5	:inherit 'outline-5)
-   (org-level-6	:inherit 'outline-6)
-   (org-level-7	:inherit 'outline-7)
-   (org-level-8	:inherit 'outline-8)
+   (org-level-1 :inherit 'outline-1)
+   (org-level-2 :inherit 'outline-2)
+   (org-level-3 :inherit 'outline-3)
+   (org-level-4 :inherit 'outline-4)
+   (org-level-5 :inherit 'outline-5)
+   (org-level-6 :inherit 'outline-6)
+   (org-level-7 :inherit 'outline-7)
+   (org-level-8 :inherit 'outline-8)
    ;; (org-archived                    :foreground doc-comments)
    (org-block                       :background base1)
    (org-block-background            :background base1)
