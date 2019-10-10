@@ -14,6 +14,15 @@
 ;; This file is not part of GNU Emacs.
 ;;
 (require 'doom-themes)
+(defgroup doom-darkpastel-theme nil
+  "Options for doom-themes"
+  :group 'doom-themes)
+
+(defcustom doom-darkpastel-set-background nil
+  "If non-nil, set background color"
+  :group 'doom-darkpastel-theme
+  :type 'boolean)
+
 (setq frame-background-mode (frame-parameter nil 'background-mode))
 (def-doom-theme doom-darkpastel
   "Doom darkpastel theme"
@@ -90,7 +99,9 @@
   ;; --- extra faces ------------------------
   (
    ;; override default settings
-   ((default &override) :background 'unspecified)
+   ((default &override)
+    :background
+    (if doom-darkpastel-set-background bg 'unspecified))
    ;; (font-lock-comment-face :foreground comments :background 'unspecified)
    ;; (font-lock-doc-face     :foreground comments :background 'unspecified)
 
@@ -151,7 +162,37 @@
    (doom-modeline-buffer-project-root :foreground green :bold t)
 
    ;; --- major-mode faces -------------------
-   ;;
+   ;; company
+   (company-tooltip
+    :inherit 'tooltip)
+   (company-tooltip-common
+    :foreground highlight :distant-foreground base0 :weight 'bold)
+   (company-tooltip-search
+    :background highlight :foreground bg :distant-foreground fg :weight 'bold)
+   (company-tooltip-search-selection
+    :background (doom-darken selection 0.25))
+   (company-tooltip-selection
+    :background selection :weight 'bold)
+   (company-tooltip-mouse
+    :background magenta   :foreground bg :distant-foreground fg)
+   (company-tooltip-annotation
+    :foreground violet :distant-foreground bg)
+   (company-scrollbar-bg
+    :inherit 'tooltip)
+   (company-scrollbar-fg
+    :background highlight)
+   (company-preview
+    :foreground comments)
+   (company-preview-common
+    :background base3 :foreground highlight)
+   (company-preview-search
+    :inherit 'company-tooltip-search)
+   (company-template-field
+    :inherit 'match)
+
+   ;; company-box
+   (company-box-candidate :foreground fg)
+
    ;; dired
    ;; (dired-header)
    ;; (dired-mark
@@ -164,13 +205,25 @@
    (dired-warning    :inherit font-lock-warning-face)
 
    (minibuffer-prompt  :foreground purple)
+   ;; ido
+   (ido-first-match :underline t :weight 'bold)
+   (ido-indicator   :foreground red :background bg)
+   (ido-only-match  :foreground yellow :overline nil :underline t)
+   (ido-subdir      :inherit dired-directory)
+   (ido-virtual     :foreground comments)
+   ;; ido-flex-with-migemo-migemo-face
+   ;; ido-incomplete-regexp
+   ;; ido-vertical-first-match-face :inherit ido-first-match
+   ;; ido-vertical-match-face
+   ;; ido-vertical-only-match-face  :inherit ido-only-match
+
    ;; ivy-mode
-   (ivy-current-match :inherit 'highlight)
+   ;; (ivy-current-match :inherit 'highlight)
    (ivy-confirm       :inherit 'minibuffer-prompt)
    (ivy-subdir        :inherit 'dired-directory)
-   (ivy-minibuffer-match-face-1  :foreground red)
-   (ivy-minibuffer-match-face-2  :foreground green)
-   (ivy-minibuffer-match-face-2  :foreground blue)
+   (ivy-minibuffer-match-face-1  :foreground hi-magenta)
+   (ivy-minibuffer-match-face-2  :foreground glass)
+   (ivy-minibuffer-match-face-2  :foreground hi-yellow)
 
    (rainbow-delimiters-mismatched-face :foreground hi-magenta :bold t)
    (rainbow-delimiters-depth-1-face    :foreground teal)
