@@ -218,9 +218,9 @@
    ;; ido-vertical-only-match-face  :inherit ido-only-match
 
    ;; ivy-mode
-   ;; (ivy-current-match :inherit 'highlight)
-   (ivy-confirm       :inherit 'minibuffer-prompt)
-   (ivy-subdir        :inherit 'dired-directory)
+   (ivy-current-match            :inherit 'highlight)
+   (ivy-confirm                  :inherit 'minibuffer-prompt)
+   (ivy-subdir                   :inherit 'dired-directory)
    (ivy-minibuffer-match-face-1  :foreground hi-magenta)
    (ivy-minibuffer-match-face-2  :foreground glass)
    (ivy-minibuffer-match-face-2  :foreground hi-yellow)
