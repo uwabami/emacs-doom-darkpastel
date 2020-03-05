@@ -104,7 +104,8 @@
     (if doom-darkpastel-set-background bg 'unspecified))
    ;; (font-lock-comment-face :foreground comments :background 'unspecified)
    ;; (font-lock-doc-face     :foreground comments :background 'unspecified)
-
+   ((italic &override)
+    :slant 'normal)
    (highlight
     :background base3
     :foreground fg
@@ -206,16 +207,17 @@
 
    (minibuffer-prompt  :foreground purple)
    ;; ido
-   (ido-first-match :underline t :weight 'bold)
-   (ido-indicator   :foreground red :background bg)
-   (ido-only-match  :foreground yellow :overline nil :underline t)
-   (ido-subdir      :inherit dired-directory)
-   (ido-virtual     :foreground comments)
+   (ido-first-match  :underline t :weight 'bold)
+   (ido-indicator    :foreground red :background bg)
+   (ido-only-match   :foreground yellow :overline nil :underline t)
+   (ido-subdir       :inherit 'dired-directory)
+   (ido-virtual      :foreground comments)
+   (ido-grid-match   :inherit 'ido-first-match)
+   ;; (ido-grid-match-1  :foreground hi-magenta)
+   ;; (ido-grid-match-2  :foreground glass)
+   ;; (ido-grid-match-2  :foreground hi-yellow)
    ;; ido-flex-with-migemo-migemo-face
    ;; ido-incomplete-regexp
-   ;; ido-vertical-first-match-face :inherit ido-first-match
-   ;; ido-vertical-match-face
-   ;; ido-vertical-only-match-face  :inherit ido-only-match
 
    ;; ivy-mode
    (ivy-current-match            :inherit 'highlight)
@@ -306,6 +308,10 @@
    (org-scheduled-previously :foreground base8)
    (org-time-grid            :foreground comments)
    (org-sexp-date            :foreground fg)
+
+   (org-journal-calendar-entry-face     :underline t)
+   (org-journal-calendar-scheduled-face :bold t)
+   (org-journal-highlight               :inherit 'highlight)
 
    ;; ;; org-habit
    ;; (org-habit-clear-face          :weight 'bold :background base4)
