@@ -120,16 +120,15 @@
    (font-lock-regexp-grouping-construct :foreground blue :bold t)
    ;; elscreen
    (elscreen-tab-control-face
-    :inherit 'modeline-bg-active
-    :foreground modeline-fg)
+    :inherit 'modeline-inactive)
    (elscreen-tab-current-screen-face
-    :inherit 'elscreen-tab-control-face)
+    :inherit 'mode-line)
    (elscreen-tab-background-face
     :inherit 'elscreen-tab-control-face
     :foreground base5
     :underlinet t)
    (elscreen-tab-other-screen-face
-    :inherit 'modeline-bg-inactive
+    :background modeline-bg-inactive
     :foreground modeline-fg-alt)
 
    (evil-goggles-default-face
