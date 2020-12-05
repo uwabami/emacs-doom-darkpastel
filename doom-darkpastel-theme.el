@@ -118,6 +118,16 @@
    (font-lock-preprocessor-char-face    :foreground red :bold t)
    (font-lock-regexp-grouping-backslash :foreground green :bold t)
    (font-lock-regexp-grouping-construct :foreground blue :bold t)
+
+   ;; tab-bar-mode
+   (tab-bar
+    :inherit 'modeline-inactive)
+   (tab-bar-tab
+    :inherit 'mode-line)
+   (tab-bar-tab-inactive
+    :background modeline-bg-inactive
+    :foreground modeline-fg-alt)
+
    ;; elscreen
    (elscreen-tab-control-face
     :inherit 'modeline-inactive)
@@ -212,9 +222,9 @@
    (ido-subdir       :inherit 'dired-directory)
    (ido-virtual      :foreground comments)
    (ido-grid-match   :inherit 'ido-first-match)
-   ;; (ido-grid-match-1  :foreground hi-magenta)
-   ;; (ido-grid-match-2  :foreground glass)
-   ;; (ido-grid-match-2  :foreground hi-yellow)
+   ;; (ido-grid-match-1  :foreground orange)
+   ;; (ido-grid-match-2  :foreground blue)
+   ;; (ido-grid-match-2  :foreground green)
    ;; ido-flex-with-migemo-migemo-face
    ;; ido-incomplete-regexp
 
@@ -222,9 +232,9 @@
    (ivy-current-match            :inherit 'highlight)
    (ivy-confirm                  :inherit 'minibuffer-prompt)
    (ivy-subdir                   :inherit 'dired-directory)
-   (ivy-minibuffer-match-face-1  :foreground hi-magenta)
-   (ivy-minibuffer-match-face-2  :foreground glass)
-   (ivy-minibuffer-match-face-2  :foreground hi-yellow)
+   (ivy-minibuffer-match-face-1  :foreground orange)
+   (ivy-minibuffer-match-face-2  :foreground blue)
+   (ivy-minibuffer-match-face-2  :foreground green)
 
    (rainbow-delimiters-mismatched-face :foreground hi-magenta :bold t)
    (rainbow-delimiters-depth-1-face    :foreground teal)
